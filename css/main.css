@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+nav .logo {
+  font-size: 1.5rem;
+}
+nav .logo a {
+  text-decoration: none;
+  color: #fff;
+}
+nav .nav-links {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding: 0;
+}
+nav .nav-links li {
+  list-style: none;
+  margin-inline: 0.5rem;
+}
+nav .nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+nav .burger {
+  display: none;
+  cursor: pointer;
+}
+nav .burger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #fff;
+}
+@media screen and (max-width: 768px) {
+  nav .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  nav .nav-links li {
+    margin: 1rem;
+  }
+  nav .nav-links.nav-active {
+    left: 0;
+    transform: translateX(0%);
+  }
+  nav .burger {
+    display: block;
+  }
+}
+nav .toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+nav .toggle .line2 {
+  opacity: 0;
+}
+nav .toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}/*# sourceMappingURL=main.css.map */
